@@ -784,7 +784,7 @@ metadata:
     app.kubernetes.io/part-of: ingress-nginx
 ```
 3. 创建帐号、角色及角色绑定
-```
+```yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -927,7 +927,7 @@ subjects:
     namespace: ingress-nginx
 ```
 4. 创建nginx-ingress-controller
-```
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -1007,7 +1007,7 @@ spec:
 ```
 5. 暴露Ingress Controller服务: Ingress 的作用在于将集群外的请求流量转向集群内的服务，而默认情况下,集群外和集群内是不互通的，所以必须将 NGINX Ingress Controller 暴露至集群外，以便让其能接受来自集群外的请求,这里使用NodePort的方式暴露。
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -1035,7 +1035,7 @@ spec:
 创建service之后,即可使用NodeIp:NodePort,根据定义的路由规则访问其他服务。
 
 Ingress定义文件示例:
-```
+```yaml
 # 最新版的k8s使用的Ingress的apiVersion为networking.k8s.io/v1beta1
 # 这里用的是阿里云镜像服务可用的apiVersion
 apiVersion: extensions/v1beta1
@@ -1133,7 +1133,7 @@ Deleting cluster "sivdead" ...
 $KUBECONFIG is still set to use /root/.kube/kind-config-sivdead even though that file has been deleted, remember to unset it
 ```
 然后创建`kind-config.yaml`
-```
+```yaml
 kind: Cluster
 apiVersion: kind.sigs.k8s.io/v1alpha3
 kubeadmConfigPatches:
@@ -1162,7 +1162,7 @@ nodes:
 
 使用该配置文件搭建集群:
 
-```
+```shell script
 ➜  ~  kind create cluster --name sivdead --config-kind.yaml
 Creating cluster "sivdead" ...
  ✓ Ensuring node image (kindest/node:v1.14.2) 🖼
