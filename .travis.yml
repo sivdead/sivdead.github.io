@@ -11,7 +11,7 @@ script:
 deploy:
   provider: pages
   token: $GH_TOKEN
-  keep_history: false
+  keep_history: true
   local_dir: public
   cleanup: false
   target_branch: master
