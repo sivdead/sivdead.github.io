@@ -756,6 +756,7 @@ metadata:
 ```
 
 #### 2. 创建configMap(nginx配置文件)
+
 ```yaml
 kind: ConfigMap
 apiVersion: v1
@@ -930,7 +931,7 @@ subjects:
     namespace: ingress-nginx
 ```
 
-4. 创建nginx-ingress-controller
+#### 4. 创建nginx-ingress-controller
 
 ```yaml
 apiVersion: apps/v1
@@ -1010,7 +1011,7 @@ spec:
             successThreshold: 1
             timeoutSeconds: 10
 ```
-5. 暴露Ingress Controller服务: Ingress 的作用在于将集群外的请求流量转向集群内的服务，而默认情况下,集群外和集群内是不互通的，所以必须将 NGINX Ingress Controller 暴露至集群外，以便让其能接受来自集群外的请求,这里使用NodePort的方式暴露。
+#### 5. 暴露Ingress Controller服务: Ingress 的作用在于将集群外的请求流量转向集群内的服务，而默认情况下,集群外和集群内是不互通的，所以必须将 NGINX Ingress Controller 暴露至集群外，以便让其能接受来自集群外的请求,这里使用NodePort的方式暴露。
 
 ```yaml
 apiVersion: v1
@@ -1036,7 +1037,6 @@ spec:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
 ```
-
 创建service之后,即可使用NodeIp:NodePort,根据定义的路由规则访问其他服务。
 
 Ingress定义文件示例:
