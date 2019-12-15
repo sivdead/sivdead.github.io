@@ -11,8 +11,9 @@ script:
 deploy:
   provider: pages
   token: $GH_TOKEN
+  keep-history: true
+  local-dir: public
+  skip-cleanup: true
+  target-branch: master
   on:
     branch: develop
-local-dir: public
-skip-cleanup: true
-keep-history: true
