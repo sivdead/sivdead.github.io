@@ -755,7 +755,7 @@ metadata:
     app.kubernetes.io/part-of: ingress-nginx
 ```
 2. 创建configMap(nginx配置文件)
-```
+```yaml
 kind: ConfigMap
 apiVersion: v1
 metadata:
