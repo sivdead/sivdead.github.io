@@ -754,6 +754,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
 ```
+
 2. 创建configMap(nginx配置文件)
 ```yaml
 kind: ConfigMap
@@ -783,6 +784,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
 ```
+
 3. 创建帐号、角色及角色绑定
 ```yaml
 apiVersion: v1
