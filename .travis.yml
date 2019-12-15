@@ -13,7 +13,7 @@ deploy:
   token: $GH_TOKEN
   keep_history: false
   local_dir: public
-  skip-cleanup: false
+  cleanup: false
   target_branch: master
   on:
     branch: develop
