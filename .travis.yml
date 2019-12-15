@@ -15,5 +15,6 @@ deploy:
   local_dir: public
   cleanup: false
   target_branch: master
+  allow_empty_commit: true
   on:
     branch: develop
