@@ -1011,7 +1011,10 @@ spec:
             successThreshold: 1
             timeoutSeconds: 10
 ```
-#### 5. 暴露Ingress Controller服务: Ingress 的作用在于将集群外的请求流量转向集群内的服务，而默认情况下,集群外和集群内是不互通的，所以必须将 NGINX Ingress Controller 暴露至集群外，以便让其能接受来自集群外的请求,这里使用NodePort的方式暴露。
+
+#### 5. 暴露Ingress Controller服务
+
+ Ingress 的作用在于将集群外的请求流量转向集群内的服务，而默认情况下,集群外和集群内是不互通的，所以必须将 NGINX Ingress Controller 暴露至集群外，以便让其能接受来自集群外的请求,这里使用NodePort的方式暴露。
 
 ```yaml
 apiVersion: v1
