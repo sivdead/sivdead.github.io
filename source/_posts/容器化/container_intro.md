@@ -744,8 +744,8 @@ Ingress并不是Kubernetes自带的,需要自己手动安装。以下说明一�
 > 所有步骤皆为按配置文件创建资源,所以我只列了配置文件,安装时依次使用`kubectl apply -f filename`安装即可。
 > 以下配置文件全部来自[官方文档](https://kubernetes.github.io/ingress-nginx/deploy/),但是现在官方文档上改了,没有这个配置文件了,所以我把我保存的发出来.
 
-1. 创建Namespace
-```
+#### 1. 创建Namespace
+```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -755,7 +755,7 @@ metadata:
     app.kubernetes.io/part-of: ingress-nginx
 ```
 
-2. 创建configMap(nginx配置文件)
+#### 2. 创建configMap(nginx配置文件)
 ```yaml
 kind: ConfigMap
 apiVersion: v1
@@ -785,7 +785,8 @@ metadata:
     app.kubernetes.io/part-of: ingress-nginx
 ```
 
-3. 创建帐号、角色及角色绑定
+#### 3. 创建帐号、角色及角色绑定
+
 ```yaml
 apiVersion: v1
 kind: ServiceAccount
@@ -928,7 +929,9 @@ subjects:
     name: nginx-ingress-serviceaccount
     namespace: ingress-nginx
 ```
+
 4. 创建nginx-ingress-controller
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
