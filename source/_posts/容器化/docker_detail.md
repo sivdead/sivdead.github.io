@@ -170,7 +170,7 @@ f4be196f3b552368a31d6739020a5218022a3748b1f6719d8a798af6b2127a95
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host 
+    inet6 ::1/128 scope host
        valid_lft forever preferred_lft forever
 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether 00:15:5d:f8:cb:a7 brd ff:ff:ff:ff:ff:ff
@@ -178,15 +178,15 @@ f4be196f3b552368a31d6739020a5218022a3748b1f6719d8a798af6b2127a95
        valid_lft 56131sec preferred_lft 56131sec
     inet6 fe80::951d:c7a5:f555:4b7d/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
-3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
     link/ether 02:42:e9:9c:11:f8 brd ff:ff:ff:ff:ff:ff
     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
        valid_lft forever preferred_lft forever
-    inet6 fe80::42:e9ff:fe9c:11f8/64 scope link 
+    inet6 fe80::42:e9ff:fe9c:11f8/64 scope link
        valid_lft forever preferred_lft forever
-35: vethad7a451@if34: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+35: vethad7a451@if34: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
     link/ether 02:f9:26:50:15:45 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet6 fe80::f9:26ff:fe50:1545/64 scope link 
+    inet6 fe80::f9:26ff:fe50:1545/64 scope link
        valid_lft forever preferred_lft forever
 ```
 
@@ -199,7 +199,7 @@ f4be196f3b552368a31d6739020a5218022a3748b1f6719d8a798af6b2127a95
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
-34: eth0@if35: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue state UP 
+34: eth0@if35: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue state UP
     link/ether 02:42:ac:11:00:02 brd ff:ff:ff:ff:ff:ff
     inet 172.17.0.2/16 brd 172.17.255.255 scope global eth0
        valid_lft forever preferred_lft forever
@@ -289,9 +289,9 @@ ca7985a0cd17        ap1                 50.32%              316KiB / 1.987GiB   
 
 ```shell
 [root@centos1 ~]# cd /sys/fs/cgroup/cpu,cpuacct/docker/47e45660899fe4d0acd2ad9f2c8ad78017c27e5ff63784a9ccff44a0ad0ffb11/
-[root@centos1 47e45660899fe4d0acd2ad9f2c8ad78017c27e5ff63784a9ccff44a0ad0ffb11]# cat cpu.cfs_period_us 
+[root@centos1 47e45660899fe4d0acd2ad9f2c8ad78017c27e5ff63784a9ccff44a0ad0ffb11]# cat cpu.cfs_period_us
 100000
-[root@centos1 47e45660899fe4d0acd2ad9f2c8ad78017c27e5ff63784a9ccff44a0ad0ffb11]# cat cpu.cfs_quota_us 
+[root@centos1 47e45660899fe4d0acd2ad9f2c8ad78017c27e5ff63784a9ccff44a0ad0ffb11]# cat cpu.cfs_quota_us
 50000
 ```
 

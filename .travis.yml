@@ -13,7 +13,7 @@ deploy:
   token: $GH_TOKEN
   keep_history: true
   local_dir: public
-  cleanup: true
+  cleanup: false
   target_branch: master
   allow_empty_commit: true
   on:
