@@ -7,12 +7,12 @@ branches:
   only:
     - develop # build master branch only
 script:
-  - hexo generate &&  ls && pwd # generate static files
+  - hexo generate &&  tree public && pwd # generate static files
 deploy:
   provider: pages
   token: $GH_TOKEN
   keep_history: false
-  local_dir: test
+  local_dir: public
   cleanup: false
   target_branch: master
   allow_empty_commit: true
