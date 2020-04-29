@@ -12,7 +12,7 @@ deploy:
   provider: pages
   token: $GH_TOKEN
   keep_history: false
-  local_dir: public
+  local_dir: test
   cleanup: false
   target_branch: master
   allow_empty_commit: true
