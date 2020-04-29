@@ -1,5 +1,5 @@
 ---
-title: Docker原理解析
+title: Docker原理概述
 date: 2020-04-22 15:19:30
 tags:
   - docker
@@ -102,7 +102,7 @@ lrwxrwxrwx. 1 polkitd input 0  uts -> uts:[4026532099]
 >
 > `docker inspect`用来查看容器的一些信息,`--format`参数使用给定的go-template来格式化输出。
 
-### namespace 详细介绍
+
 
 #### pid namespace
 

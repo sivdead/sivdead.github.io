@@ -7,7 +7,7 @@ branches:
   only:
     - develop # build master branch only
 script:
-  - hexo generate # generate static files
+  - ls && hexo generate # generate static files
 deploy:
   provider: pages
   token: $GH_TOKEN
