@@ -12,7 +12,8 @@ deploy:
   provider: pages
   token: $GH_TOKEN
   keep_history: false
-  local_dir: js
+  local_dir: public
+  skip_cleanup: true
   cleanup: false
   target_branch: master
   allow_empty_commit: true
